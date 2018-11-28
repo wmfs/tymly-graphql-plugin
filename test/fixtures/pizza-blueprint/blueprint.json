@@ -1,0 +1,11 @@
+{
+  "namespace": "pizza",
+  "name": "pizza-blueprint",
+  "version": "1.0",
+  "label": "pizza-blueprint",
+  "author": "Tymly",
+
+  "organisation": "West Midlands Fire Service",
+  "description": "P I Z Z A!!!",
+  "categories": []
+}
