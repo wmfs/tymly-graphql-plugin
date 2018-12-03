@@ -20,7 +20,11 @@
   "main": "./lib/index.js",
   "dependencies": {
     "apollo-server": "2.2.2",
-    "graphql": "14.0.2"
+    "boom": "7.3.0",
+    "dottie": "2.0.1",
+    "graphql": "14.0.2",
+    "jsonwebtoken": "8.4.0",
+    "express-jwt": "5.3.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.1",

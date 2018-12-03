@@ -7,6 +7,9 @@ const expect = require('chai').expect
 describe('GraphQL tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
+  const secret = 'Shhh!'
+  const audience = 'IAmTheAudience!'
+
   let tymlyService
 
   it('boot Tymly', done => {
@@ -20,7 +23,10 @@ describe('GraphQL tests', function () {
         ],
         blueprintPaths: [
           path.resolve(__dirname, './../test/fixtures/pizza-blueprint')
-        ]
+        ],
+        config: {
+          auth: { secret, audience }
+        }
       },
       (err, services) => {
         expect(err).to.eql(null)
