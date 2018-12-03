@@ -19,9 +19,10 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "apollo-server": "2.2.2",
+    "apollo-server-express": "2.2.5",
     "boom": "7.3.0",
     "dottie": "2.0.1",
+    "express": "4.16.4",
     "graphql": "14.0.2",
     "jsonwebtoken": "8.4.0",
     "express-jwt": "5.3.1"
