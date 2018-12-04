@@ -21,11 +21,12 @@ describe('GraphQL tests', function () {
 
   const secret = 'Shhh!'
   const audience = 'IAmTheAudience!'
+  const subject = 'Dave'
 
   let tymlyService, server, adminToken
 
-  it('create a usable admin token for Dave', () => {
-    adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
+  it(`create a usable admin token for ${subject}`, () => {
+    adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject, audience })
   })
 
   it('boot Tymly without auth config', done => {
@@ -61,8 +62,7 @@ describe('GraphQL tests', function () {
           path.resolve(__dirname, './../test/fixtures/pizza-blueprint')
         ],
         config: {
-          auth: { secret, audience },
-          defaultUsers: { Dave: 'tymlyTest_tymlyTestAdmin' }
+          auth: { secret, audience }
         }
       },
       (err, services) => {
@@ -92,7 +92,7 @@ describe('GraphQL tests', function () {
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(401)
-        done()
+        done(err)
       }
     )
   })
