@@ -6,9 +6,9 @@ const URL = `http://localhost:${PORT}/graphql`
 const path = require('path')
 const tymly = require('@wmfs/tymly')
 const expect = require('chai').expect
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken')
 const request = require('request')
-const Buffer = require('safe-buffer').Buffer
+// const Buffer = require('safe-buffer').Buffer
 
 // function sendToken (adminToken) {
 //   const options = { Accept: '*/*' }
