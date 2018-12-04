@@ -10,11 +10,11 @@ const jwt = require('jsonwebtoken')
 const request = require('request')
 const Buffer = require('safe-buffer').Buffer
 
-function sendToken (adminToken) {
-  const options = { Accept: '*/*' }
-  if (adminToken) options.authorization = 'Bearer ' + adminToken
-  return options
-}
+// function sendToken (adminToken) {
+//   const options = { Accept: '*/*' }
+//   if (adminToken) options.authorization = 'Bearer ' + adminToken
+//   return options
+// }
 
 describe('GraphQL tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
@@ -22,11 +22,11 @@ describe('GraphQL tests', function () {
   const secret = 'Shhh!'
   const audience = 'IAmTheAudience!'
 
-  let tymlyService, adminToken, server
+  let tymlyService, server // , adminToken
 
-  it('create a usable admin token for Dave', () => {
-    adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
-  })
+  // it('create a usable admin token for Dave', () => {
+  //   adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
+  // })
 
   it('boot Tymly', done => {
     tymly.boot(
