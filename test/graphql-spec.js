@@ -28,6 +28,26 @@ describe('GraphQL tests', function () {
   //   adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
   // })
 
+  it('boot Tymly without auth config', done => {
+    tymly.boot(
+      {
+        pluginPaths: [
+          path.resolve(__dirname, './../lib'),
+          require.resolve('@wmfs/tymly-users-plugin'),
+          require.resolve('@wmfs/tymly-rbac-plugin'),
+          require.resolve('@wmfs/tymly-solr-plugin')
+        ],
+        blueprintPaths: [
+          path.resolve(__dirname, './../test/fixtures/pizza-blueprint')
+        ]
+      },
+      (err, services) => {
+        expect(err.message).to.eql('Failed to set-up authentication middleware: Is $TYMLY_AUTH_SECRET/$TYMLY_AUTH_CERTIFICATE and $TYMLY_AUTH_AUDIENCE set?')
+        done()
+      }
+    )
+  })
+
   it('boot Tymly', done => {
     tymly.boot(
       {
