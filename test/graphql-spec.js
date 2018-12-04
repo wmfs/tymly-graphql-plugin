@@ -6,15 +6,15 @@ const URL = `http://localhost:${PORT}/graphql`
 const path = require('path')
 const tymly = require('@wmfs/tymly')
 const expect = require('chai').expect
-// const jwt = require('jsonwebtoken')
 const request = require('request')
-// const Buffer = require('safe-buffer').Buffer
+const jwt = require('jsonwebtoken')
+const Buffer = require('safe-buffer').Buffer
 
-// function sendToken (adminToken) {
-//   const options = { Accept: '*/*' }
-//   if (adminToken) options.authorization = 'Bearer ' + adminToken
-//   return options
-// }
+function sendToken (adminToken) {
+  const options = { Accept: '*/*' }
+  if (adminToken) options.authorization = 'Bearer ' + adminToken
+  return options
+}
 
 describe('GraphQL tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
@@ -22,11 +22,11 @@ describe('GraphQL tests', function () {
   const secret = 'Shhh!'
   const audience = 'IAmTheAudience!'
 
-  let tymlyService, server // , adminToken
+  let tymlyService, server, adminToken
 
-  // it('create a usable admin token for Dave', () => {
-  //   adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
-  // })
+  it('create a usable admin token for Dave', () => {
+    adminToken = jwt.sign({}, Buffer.from(secret, 'base64'), { subject: 'Dave', audience })
+  })
 
   it('boot Tymly without auth config', done => {
     tymly.boot(
@@ -81,7 +81,7 @@ describe('GraphQL tests', function () {
     })
   })
 
-  it('attempt to get templates', done => {
+  it('attempt to get templates without token', done => {
     request(
       {
         url: URL,
@@ -89,6 +89,23 @@ describe('GraphQL tests', function () {
         json: {
           query: '{templates}'
         }
+      },
+      (err, res, body) => {
+        expect(res.statusCode).to.equal(401)
+        done()
+      }
+    )
+  })
+
+  it('attempt to get templates with token', done => {
+    request(
+      {
+        url: URL,
+        method: 'POST',
+        json: {
+          query: '{templates}'
+        },
+        headers: sendToken(adminToken)
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
@@ -110,7 +127,8 @@ describe('GraphQL tests', function () {
         method: 'POST',
         json: {
           query: '{ getCard { title subtitle } }'
-        }
+        },
+        headers: sendToken(adminToken)
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
@@ -131,7 +149,8 @@ describe('GraphQL tests', function () {
         method: 'POST',
         json: {
           query: '{ getCards { title subtitle } }'
-        }
+        },
+        headers: sendToken(adminToken)
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
@@ -152,7 +171,8 @@ describe('GraphQL tests', function () {
         method: 'POST',
         json: {
           query: '{ getCardsNearby { title subtitle } }'
-        }
+        },
+        headers: sendToken(adminToken)
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
@@ -173,7 +193,8 @@ describe('GraphQL tests', function () {
         method: 'POST',
         json: {
           query: 'mutation { addDoc }'
-        }
+        },
+        headers: sendToken(adminToken)
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
