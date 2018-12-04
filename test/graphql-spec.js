@@ -88,8 +88,53 @@ describe('GraphQL tests', function () {
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
-        expect(body.data.getCard.title).to.eql('Title') // temporary
-        expect(body.data.getCard.subtitle).to.eql('Subtitle') // temporary
+
+        // temporary
+        expect(body.data.getCard.title).to.eql('Title')
+        expect(body.data.getCard.subtitle).to.eql('Subtitle')
+
+        done(err)
+      }
+    )
+  })
+
+  it('attempt to get cards', done => {
+    request(
+      {
+        url: URL,
+        method: 'POST',
+        json: {
+          query: '{ getCards { title subtitle } }'
+        }
+      },
+      (err, res, body) => {
+        expect(res.statusCode).to.equal(200)
+
+        // temporary
+        expect(body.data.getCards[0].title).to.eql('Title')
+        expect(body.data.getCards[0].subtitle).to.eql('Subtitle')
+
+        done(err)
+      }
+    )
+  })
+
+  it('attempt to get cards nearby', done => {
+    request(
+      {
+        url: URL,
+        method: 'POST',
+        json: {
+          query: '{ getCardsNearby { title subtitle } }'
+        }
+      },
+      (err, res, body) => {
+        expect(res.statusCode).to.equal(200)
+
+        // temporary
+        expect(body.data.getCardsNearby[0].title).to.eql('Title')
+        expect(body.data.getCardsNearby[0].subtitle).to.eql('Subtitle')
+
         done(err)
       }
     )
