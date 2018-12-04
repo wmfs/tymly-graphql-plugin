@@ -140,6 +140,26 @@ describe('GraphQL tests', function () {
     )
   })
 
+  it('attempt to add doc', done => {
+    request(
+      {
+        url: URL,
+        method: 'POST',
+        json: {
+          query: 'mutation { addDoc }'
+        }
+      },
+      (err, res, body) => {
+        expect(res.statusCode).to.equal(200)
+
+        // temporary
+        expect(body.data.addDoc).to.eql(true)
+
+        done(err)
+      }
+    )
+  })
+
   it('should shut down Tymly nicely', async () => {
     await tymlyService.shutdown()
   })
