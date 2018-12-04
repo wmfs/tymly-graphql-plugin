@@ -77,6 +77,24 @@ describe('GraphQL tests', function () {
     )
   })
 
+  it('attempt to get card', done => {
+    request(
+      {
+        url: URL,
+        method: 'POST',
+        json: {
+          query: '{ getCard { title subtitle } }'
+        }
+      },
+      (err, res, body) => {
+        expect(res.statusCode).to.equal(200)
+        expect(body.data.getCard.title).to.eql('Title') // temporary
+        expect(body.data.getCard.subtitle).to.eql('Subtitle') // temporary
+        done(err)
+      }
+    )
+  })
+
   it('should shut down Tymly nicely', async () => {
     await tymlyService.shutdown()
   })
