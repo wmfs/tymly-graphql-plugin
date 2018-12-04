@@ -92,6 +92,12 @@ describe('GraphQL tests', function () {
       },
       (err, res, body) => {
         expect(res.statusCode).to.equal(200)
+
+        const templates = JSON.parse(body.data.templates)
+
+        expect(Object.keys(templates)).to.eql(['pizza_orderPizza'])
+        expect(templates['pizza_orderPizza'].title).to.eql('Pizza Place')
+
         done(err)
       }
     )
