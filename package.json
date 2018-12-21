@@ -42,7 +42,7 @@
     "standard": "12.0.1",
     "@wmfs/tymly-users-plugin": "1.12.0",
     "@wmfs/tymly-solr-plugin": "1.8.0",
-    "@wmfs/tymly-rbac-plugin": "1.12.0"
+    "@wmfs/tymly-rbac-plugin": "1.12.1"
   },
   "scripts": {
     "lint": "standard",
