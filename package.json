@@ -19,7 +19,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "apollo-server-express": "2.2.5",
+    "apollo-server-express": "2.5.1",
     "boom": "7.3.0",
     "dottie": "2.0.1",
     "express": "4.16.4",
