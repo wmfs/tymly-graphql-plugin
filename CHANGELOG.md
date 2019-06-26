@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.0.1...v1.1.0) (2019-06-26)
+
+
+### 🛠 Builds
+
+* **deps:** update apollo-server-express requirement ([2ae5e33](https://github.com/wmfs/tymly-graphql-plugin/commit/2ae5e33))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([#3](https://github.com/wmfs/tymly-graphql-plugin/issues/3)) ([f4ed968](https://github.com/wmfs/tymly-graphql-plugin/commit/f4ed968))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.62.0 to 1.75.0 ([#2](https://github.com/wmfs/tymly-graphql-plugin/issues/2)) ([7b316c0](https://github.com/wmfs/tymly-graphql-plugin/commit/7b316c0))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-rbac-plugin requirement ([#4](https://github.com/wmfs/tymly-graphql-plugin/issues/4)) ([77ba600](https://github.com/wmfs/tymly-graphql-plugin/commit/77ba600))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-solr-plugin requirement ([#5](https://github.com/wmfs/tymly-graphql-plugin/issues/5)) ([5ab1792](https://github.com/wmfs/tymly-graphql-plugin/commit/5ab1792))
+* **deps-dev:** update semantic-release requirement ([#1](https://github.com/wmfs/tymly-graphql-plugin/issues/1)) ([d7aa585](https://github.com/wmfs/tymly-graphql-plugin/commit/d7aa585))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add circle ci config ([be39057](https://github.com/wmfs/tymly-graphql-plugin/commit/be39057))
+* **travis:** update travis config ([cbd3171](https://github.com/wmfs/tymly-graphql-plugin/commit/cbd3171))
+
 ## [1.0.1](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.0.0...v1.0.1) (2018-12-04)
 
 
