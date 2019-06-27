@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.1.0...v1.2.0) (2019-06-27)
+
+
+### 🛠 Builds
+
+* **deps:** update graphql requirement from 14.0.2 to 14.4.0 ([b7ae4a2](https://github.com/wmfs/tymly-graphql-plugin/commit/b7ae4a2))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([fc87e80](https://github.com/wmfs/tymly-graphql-plugin/commit/fc87e80))
+
 # [1.1.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.0.1...v1.1.0) (2019-06-26)
 
 
