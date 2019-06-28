@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.2.0...v1.3.0) (2019-06-28)
+
+
+### 🛠 Builds
+
+* **deps:** update express requirement from 4.16.4 to 4.17.1 ([56e42d5](https://github.com/wmfs/tymly-graphql-plugin/commit/56e42d5))
+* **deps-dev:** update semantic-release requirement ([8d12f06](https://github.com/wmfs/tymly-graphql-plugin/commit/8d12f06))
+
 # [1.2.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.1.0...v1.2.0) (2019-06-27)
 
 
