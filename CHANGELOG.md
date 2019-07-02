@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.3.0...v1.4.0) (2019-07-02)
+
+
+### 🛠 Builds
+
+* **deps:** update helmet requirement from 3.15.0 to 3.18.0 ([fac7913](https://github.com/wmfs/tymly-graphql-plugin/commit/fac7913))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-users-plugin requirement ([03e6414](https://github.com/wmfs/tymly-graphql-plugin/commit/03e6414))
+* **deps-dev:** update nyc requirement from 13.1.0 to 14.1.1 ([c68bef6](https://github.com/wmfs/tymly-graphql-plugin/commit/c68bef6))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** Update CircleCI config - Travis migration ([d1859f5](https://github.com/wmfs/tymly-graphql-plugin/commit/d1859f5))
+
 # [1.3.0](https://github.com/wmfs/tymly-graphql-plugin/compare/v1.2.0...v1.3.0) (2019-06-28)
 
 
