@@ -24,7 +24,7 @@
     "dottie": "2.0.1",
     "express": "4.17.1",
     "graphql": "14.4.1",
-    "helmet": "3.18.0",
+    "helmet": "3.21.2",
     "jsonwebtoken": "8.4.0",
     "express-jwt": "5.3.1"
   },
