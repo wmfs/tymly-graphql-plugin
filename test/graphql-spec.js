@@ -34,7 +34,7 @@ describe('GraphQL tests', function () {
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib'),
-          require.resolve('@wmfs/tymly-users-plugin'),
+          require.resolve('@wmfs/tymly-cardscript-plugin'),
           require.resolve('@wmfs/tymly-rbac-plugin'),
           require.resolve('@wmfs/tymly-solr-plugin')
         ],
@@ -54,7 +54,7 @@ describe('GraphQL tests', function () {
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib'),
-          require.resolve('@wmfs/tymly-users-plugin'),
+          require.resolve('@wmfs/tymly-cardscript-plugin'),
           require.resolve('@wmfs/tymly-rbac-plugin'),
           require.resolve('@wmfs/tymly-solr-plugin')
         ],
