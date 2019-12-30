@@ -1,0 +1,11 @@
+{
+  "name": "graphql",
+  "version": "1.5.0",
+  "label": "Graphql",
+  "author": "Meena Hoda",
+  "organisation": "West Midlands Fire Service",
+  "description": "Tymly plugin to expose Tymly via Graphql",
+  "categories": [
+    "graphql"
+  ]
+}
